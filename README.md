@@ -1,4 +1,4 @@
-# SauceDemo Automation - Playwright TypeScript
+# SauceDemo Automation Testing - Menggunakan Playwright TypeScript
 
 E2E test automation untuk aplikasi **SauceDemo (Swag Labs)** menggunakan Playwright + TypeScript dengan pattern Page Object Model (POM).
 

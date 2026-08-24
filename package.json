@@ -1,0 +1,47 @@
+{
+  "name": "saucedemo-automation",
+  "version": "1.0.0",
+  "description": "SauceDemo E2E automation using Playwright with TypeScript and POM",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:login:positive": "npx playwright test tests/login-positive.spec.ts",
+    "test:login:negative": "npx playwright test tests/login-negative.spec.ts",
+    "test:inventory": "npx playwright test tests/inventory.spec.ts",
+    "test:cart": "npx playwright test tests/cart.spec.ts",
+    "test:checkout": "npx playwright test tests/checkout.spec.ts",
+    "test:e2e": "npx playwright test tests/e2e-order.spec.ts",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:webkit": "npx playwright test --project=webkit",
+    "test:smoke": "npx playwright test --grep @smoke",
+    "test:regression": "npx playwright test --grep @regression",
+    "report": "npx playwright show-report",
+    "report:email": "npx ts-node scripts/send-email-report.ts",
+    "codegen": "npx playwright codegen https://www.saucedemo.com"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "automation",
+    "e2e",
+    "pom",
+    "saucedemo"
+  ],
+  "author": "QA Automation Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^26.2.0",
+    "dotenv": "^16.3.1",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@types/adm-zip": "^0.5.8",
+    "@types/nodemailer": "^8.0.1",
+    "adm-zip": "^0.6.0",
+    "nodemailer": "^9.0.5"
+  }
+}

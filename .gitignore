@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Test results
+test-results/
+playwright-report/
+blob-report/
+playwright-report.zip
+
+# Screenshots
+screenshots/
+!screenshots/.gitkeep
+
+# Skills (local)
+.agents/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Coverage
+coverage/

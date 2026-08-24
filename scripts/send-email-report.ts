@@ -2,6 +2,10 @@ import { EmailReport } from '../utils/email-report';
 import { resolve } from 'path';
 import { existsSync } from 'fs';
 import AdmZip from 'adm-zip';
+import dotenv from 'dotenv';
+
+dotenv.config({ path: resolve(__dirname, '../.env') });
+EmailReport.initTransporter();
 
 function createReportZip(reportDir: string, outputPath: string): string | null {
   if (!existsSync(reportDir)) {

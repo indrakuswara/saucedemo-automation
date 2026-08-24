@@ -27,10 +27,23 @@ export class EmailReport {
   private static transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
+      user: process.env.SMTP_USER || '',
+      pass: process.env.SMTP_PASS || '',
     },
   });
+
+  /**
+   * Re-initialize transporter with current env vars (call after dotenv.config())
+   */
+  static initTransporter() {
+    this.transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+  }
 
   /**
    * Send test report email with HTML summary + attachments

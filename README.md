@@ -335,4 +335,4 @@ EMAIL_TO=recipient@gmail.com
 
 ## 📄 License
 
-MIT
+Indra Kuswara
